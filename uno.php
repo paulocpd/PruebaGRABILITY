@@ -43,9 +43,10 @@ for($tem=1;$tem<count($arrayInput);$tem++){
 		$index=$index+$arraylongTest[$r]+1;
 }
 	$arrOut=array();
-	echo "<pre>";
+	/*echo "<pre>";
 	print_r($arrTipeQuery);
 	echo "<pre>";
+	*/
 	foreach ($arrTipeQuery as $k => $untipe) {
 		for($ref=0;$ref<=100;$ref++){
 			$arrayMatrix[$ref]=0;
@@ -78,7 +79,7 @@ for($tem=1;$tem<count($arrayInput);$tem++){
 					}
 					
 				}
-			echo $resul."<br>";
+			echo $resul."\n";
 			}
 
 		}
