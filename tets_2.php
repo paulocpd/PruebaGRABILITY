@@ -17,22 +17,41 @@ if ($_fp) {
     // error opening the file.
 } 
 $arrayTem=array();
-$totalTest=$arrayInput[0];
+echo $totalTest=$arrayInput[0];
 for($tem=1;$tem<count($arrayInput);$tem++){
 		$arrayTem[$tem]=$arrayInput[$tem];
 
 	}
+
+
+	$arrOut=array();
+	echo "<pre>";
+	print_r($arrayTem);
+	echo "<pre>";
+
+
 	$arrayInput=$arrayTem;
 	
 	$cut=1;
 	$arraylongTest=array();
 	for($numTest=0;$numTest<$totalTest;$numTest++){
+
+
 		 $line2=explode(" ",$arrayInput[$cut]);
 		 $line2[1];
 		 $cut=$line2[1]+2;
 		 $arraylongTest[$numTest]=$line2[1];	
 	}
 	$arrTipeQuery=array();
+	
+
+	$arrOut=array();
+	echo "<pre>";
+	print_r($arrTipeQuery);
+	echo "<pre>";
+	
+
+
 	$index=2;
 	for ($r=0;$r<count($arraylongTest);$r++) {
 		
@@ -41,12 +60,21 @@ for($tem=1;$tem<count($arrayInput);$tem++){
 			$arrTipeQuery[$r][$x]=explode(" ", $arrayInput[$x+$index]);
 		}
 		$index=$index+$arraylongTest[$r]+1;
+
+
+
 }
+	
+
+
+
 	$arrOut=array();
-	/*echo "<pre>";
+	echo "<pre>";
 	print_r($arrTipeQuery);
 	echo "<pre>";
-	*/
+	
+
+	exit();
 	foreach ($arrTipeQuery as $k => $untipe) {
 		for($ref=0;$ref<=100;$ref++){
 			$arrayMatrix[$ref]=0;
